@@ -1,0 +1,40 @@
+<head>
+  <!-- Añadimos un enlace a una fuente personalizada -->
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <!-- Añadimos un estilo para cambiar el fondo de la página -->
+  <style>
+    body {
+      background-color: #90EE90;
+  }
+</style>
+</head>
+<body>
+  <!-- Aplicamos la fuente personalizada a un elemento -->
+  <h1 class="titulo-blanco">Bienvenido a Foxy Motivator</h1>
+</body>
+<body>
+  <!-- Creamos un botón para mostrar la frase -->
+  <button id="btn-frase">Ver frase motivadora</button>
+  <!-- Creamos un elemento para mostrar la frase -->
+  <p id="frase"></p>
+  <script>
+    // Creamos una lista de frases motivadoras
+    var frases = [
+      "La perseverancia es la clave del éxito.",
+      "El éxito es la suma de pequeños esfuerzos, repetidos día tras día.",
+      "No te rindas nunca, porque nunca sabes si el próximo intento será el que funcionará.",
+      "Si quieres lograr algo que nunca has logrado antes, tienes que hacer algo que nunca has hecho antes.",
+      "El verdadero fracaso es rendirse sin haberlo intentado.",
+      // ... agrega más frases aquí
+    ];
+    // Añadimos un evento de clic al botón
+    document.querySelector("#btn-frase").addEventListener("click", function() {
+      // Obtenemos una frase aleatoria de la lista
+      var frase = frases[Math.floor(Math.random() * frases.length)];
+      // Mostramos la frase en el elemento
+      document.querySelector("#frase").textContent = frase;
+    });
+  </script>
+  <!-- Creamos un elemento para mostrar el mensaje de promoción -->
+  <p id="promocion">Prueba la versión de extensión de Google para más frases y cosas!</p>
+</body>
